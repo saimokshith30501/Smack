@@ -6,8 +6,10 @@ import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,7 +30,20 @@ class MainActivity : AppCompatActivity() {
         } else {
             super.onBackPressed()
         }
+
+    }
+    fun loginbutton_nav_clicked(view: View){
+       Snackbar.make(view,"Login Clicked",Snackbar.LENGTH_SHORT).show()
     }
 
+    fun addchannel(view: View){
+        Snackbar.make(view,"Add Channel Clicked",Snackbar.LENGTH_SHORT).show()
+    }
+
+    fun sendmsgclicked(view: View){
+        lateinit var disp:String
+        disp= Message_textfield.text.toString()
+        Snackbar.make(view,"Text->$disp",Snackbar.LENGTH_SHORT).show()
+    }
 
 }
