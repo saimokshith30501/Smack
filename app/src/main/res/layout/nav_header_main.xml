@@ -45,12 +45,11 @@
         android:id="@+id/Loginbutton_nav"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginStart="24dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
         android:onClick="loginbutton_nav_clicked"
         android:text=" Login"
-        android:textAlignment="textStart"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

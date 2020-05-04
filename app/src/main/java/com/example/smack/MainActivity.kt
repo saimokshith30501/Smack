@@ -1,4 +1,5 @@
 package com.example.smack
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -33,7 +34,8 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun loginbutton_nav_clicked(view: View){
-       Snackbar.make(view,"Login Clicked",Snackbar.LENGTH_SHORT).show()
+       var log:Intent= Intent(this,LoginActivity::class.java)
+        startActivity(log)
     }
 
     fun addchannel(view: View){
