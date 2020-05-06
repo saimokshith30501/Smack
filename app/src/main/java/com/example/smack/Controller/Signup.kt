@@ -1,10 +1,10 @@
-package com.example.smack
+package com.example.smack.Controller
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.smack.R.*
+import com.example.smack.R
 import kotlinx.android.synthetic.main.activity_signup.*
 import java.util.*
 
