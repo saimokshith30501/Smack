@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.smack.R
+import com.example.smack.Services.Authservice
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_signup.*
 import java.util.*
 
@@ -25,7 +27,17 @@ class Signup : AppCompatActivity() {
     }
 
     fun createuser(view: View){
-
+        val emailid =email_signup.text.toString()
+        val userpassword=password_signup.text.toString()
+       Authservice.registerUser(this,emailid,userpassword){ regsuccess->
+           if (regsuccess){
+               Authservice.loginUser(this,emailid,userpassword){loginsuccess->
+                   if(loginsuccess) {
+                       Snackbar.make(view, "LOGIN SUCCESS", Snackbar.LENGTH_SHORT).show()
+                   }
+               }
+           }
+       }
     }
     fun avatar(view: View){
      val random=Random()
